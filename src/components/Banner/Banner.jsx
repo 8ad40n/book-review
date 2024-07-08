@@ -1,12 +1,5 @@
 import banner from "../../assets/banner.png";
 export default function Banner({}) {
-//   const [books, setBooks] = useState([]);
-
-//   useEffect(() => {
-//     fetch("books.json")
-//       .then((response) => response.json())
-//       .then((json) => setBooks(json));
-//   }, []);
 
   return (
     <div className="flex flex-col-reverse md:flex-row md:justify-between md:items-center bg-[#1313130D] rounded-2xl px-10 py-6 md:px-20 md:py-10">
