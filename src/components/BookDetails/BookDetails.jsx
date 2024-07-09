@@ -9,15 +9,15 @@ export default function BookDetails() {
   const {image, title, author, description, genre, hashtags, total_pages, publisher, year_of_publishing, rating} = bookDetails;
 
   return (
-    <div className="md:mt-10">
-      <div className="md:flex md:gap-10 md:justify-center md:items-center">
+    <div className="my-6 md:my-10">
+      <div className="lg:flex md:gap-10 md:justify-center md:items-center">
 
-        <div className="w-2/5">
+        <div className="mx-auto lg:w-2/5 mb-6 md:mb-8">
           <img className="rounded-3xl" src={image} alt={title} />
         </div>
 
-        <div className="w-3/5 flex flex-col">
-          <h1 className="playfair text-4xl font-bold mb-6">{title}</h1>
+        <div className="lg:w-3/5 flex flex-col pl-3">
+          <h1 className="playfair text-3xl md:text-4xl font-bold mb-6">{title}</h1>
           <p className="font-medium">By: {author}</p>
           <hr className="border border-1 border-dashed my-3"/>
           <p className="font-medium">{genre}</p>
