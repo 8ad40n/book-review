@@ -8,14 +8,14 @@ export default function Book({ book }) {
         <figure className="px-3 pt-3 md:px-6 md:pt-6">
           <img src={image} alt="Shoes" className="rounded-xl" />
         </figure>
-        <div className="flex gap-1 justify-center mt-3">
+        <div className="md:flex gap-1 justify-center mt-3">
             {
               hashtags.map((hash) => (
-              <p className="text-[#23BE0A] text-sm bg-[#23BE0A0D] px-3 py-2 rounded-2xl font-medium">{hash}</p>))
+              <p className="text-center mb-1 mx-2 text-[#23BE0A] text-xs md:text-sm bg-[#23BE0A0D] px-2 md:px-3 py-2 rounded-2xl font-medium">{hash}</p>))
             }
           </div>
-        <div className="card-body">
-          <h2 className="card-title font-bold text-2xl playfair">{title}</h2>
+        <div className="card-body translate-y-[-20px]">
+          <h2 className="card-title font-bold text-xl md:text-2xl playfair">{title}</h2>
           <p className="text-xs">By: {author}</p>
           <hr className="border border-1 border-dashed my-2" />
           <div className="flex justify-between">
