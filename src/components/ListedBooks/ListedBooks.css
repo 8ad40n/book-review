@@ -1,3 +1,9 @@
-.active{
+.active {
     color: brown;
+    border: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    padding-top: 6px;
+    padding: 0px 10px;
 }

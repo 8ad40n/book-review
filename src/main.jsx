@@ -2,6 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
+  Navigate,
   RouterProvider,
 } from "react-router-dom";
 import BookDetails from "./components/BookDetails/BookDetails";
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
         path: "/listedBooks",
         element: <ListedBooks></ListedBooks>,
         children: [
+          {
+            path: "/listedBooks",
+            element: <Navigate to="/listedBooks/readBooks" replace />, 
+          },
           {
             path: "/listedBooks/readBooks",
             element: <ReadBooks></ReadBooks>
