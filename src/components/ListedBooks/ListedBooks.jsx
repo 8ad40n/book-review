@@ -18,11 +18,12 @@ export default function ListedBooks() {
           </li>
         </ul>
       </details>
-      <div className="">
-        <NavLink to="/listedBooks/readBooks" className="mr-4">Read Books</NavLink>
-        <NavLink to="/listedBooks/wishList">Wishlist Books</NavLink>
-        <Outlet></Outlet>
+      <div className="mb-6">
+        <NavLink to="/listedBooks/readBooks" className="border-b-2 border-b-[#1313134D] px-2 py-2">Read Books</NavLink>
+        <NavLink to="/listedBooks/wishList" className="border-b-2 border-b-[#1313134D] px-2 py-2">Wishlist Books</NavLink>
+        
       </div>
+      <Outlet></Outlet>
     </div>
   );
 }

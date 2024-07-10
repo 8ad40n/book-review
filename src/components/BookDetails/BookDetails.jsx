@@ -1,4 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveRead, saveWishlist } from "../../utility/localStorage";
 
 export default function BookDetails() {
   const { id } = useParams();
@@ -7,6 +10,16 @@ export default function BookDetails() {
   const bookDetails = books.find(book => book.id === intID);
 
   const {image, title, author, description, genre, hashtags, total_pages, publisher, year_of_publishing, rating} = bookDetails;
+
+
+  const handleRead = ()=>{
+    saveRead(intID);
+    toast("Added to Read List!");
+  }
+  const handleWishlist = ()=>{
+    saveWishlist(intID);
+    toast("Added to Wishlist!");
+  }
 
   return (
     <div className="my-6 md:my-10">
@@ -36,8 +49,9 @@ export default function BookDetails() {
           <p className="text-sm font-bold mb-2"><span className="font-normal">Year of Publishing: </span>{year_of_publishing}</p>
           <p className="text-sm font-bold mb-2"><span className="font-normal">Rating: </span>{rating}</p>
           <div className="flex gap-4 mt-3">
-            <button className="px-3 py-2 border border-solid border-1 border-gray-400 rounded-md hover:bg-black hover:text-white">Read</button>
-            <button className="px-3 py-2 bg-[#50B1C9] text-white rounded-md hover:bg-black hover:text-white">Wishlist</button>
+            <button onClick={handleRead} className="px-3 py-2 border border-solid border-1 border-gray-400 rounded-md hover:bg-black hover:text-white">Read</button>
+            <button onClick={handleWishlist} className="px-3 py-2 bg-[#50B1C9] text-white rounded-md hover:bg-black hover:text-white">Wishlist</button>
+            <ToastContainer></ToastContainer>
           </div>
         </div>
 
