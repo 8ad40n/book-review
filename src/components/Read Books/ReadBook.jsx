@@ -1,8 +1,10 @@
 import { IoLocationOutline, IoPeopleOutline } from "react-icons/io5";
 import { MdOutlineContactPage } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default function ReadBook({ read }) {
   const {
+    id,
     image,
     title,
     hashtags,
@@ -58,9 +60,9 @@ export default function ReadBook({ read }) {
                 Rating: {rating}
               </h3>
             </div>
-            <button className="text-white bg-[#23BE0A] px-3 py-1 rounded-xl hover:text-white hover:bg-black">
+            <Link to={`/book/${id}`}  className="text-white bg-[#23BE0A] px-3 py-1 rounded-xl hover:text-white hover:bg-black">
               View Details
-            </button>
+            </Link>
           </div>
         </div>
       </div>
