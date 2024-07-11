@@ -60,7 +60,7 @@ export default function ReadBook({ read }) {
                 Rating: {rating}
               </h3>
             </div>
-            <Link to={`/book/${id}`}  className="text-white bg-[#23BE0A] px-3 py-1 rounded-xl hover:text-white hover:bg-black">
+            <Link to={`/book/${id}`}  className="text-center text-white bg-[#23BE0A] px-3 py-1 rounded-xl hover:text-white hover:bg-black">
               View Details
             </Link>
           </div>

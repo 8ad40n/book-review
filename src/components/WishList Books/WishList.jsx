@@ -21,9 +21,14 @@ export default function WishList() {
   }, []);
   return (
     <div className="flex flex-col gap-6 mb-10">
-      {
-        wish.map(r=> <ReadBook key={r.id} read={r}></ReadBook>)
-      }
+      {wish.length > 0 ? (
+        wish.map((r) => <ReadBook key={r.id} read={r}></ReadBook>)
+      ) : (
+        <div className="text-center mt-6">
+          <h2 className="text-xl font-bold">No books in your wishlist yet</h2>
+          <p>Add some books to see them listed here.</p>
+        </div>
+      )}
     </div>
   )
 }

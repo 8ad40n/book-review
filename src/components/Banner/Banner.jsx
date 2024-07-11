@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import banner from "../../assets/banner.png";
 export default function Banner({}) {
 
@@ -6,7 +7,7 @@ export default function Banner({}) {
       <div className="flex flex-col justify-center ">
         <h1 className="playfair text-4xl md:text-6xl font-bold mb-4 mt-4 md:mb-8 text-center lg:text-left">Books to freshen up your bookshelf</h1>
         <div className="flex justify-center lg:justify-start">
-          <button className="btn max-w-40 bg-[#23BE0A] text-white px-4 py-3 rounded-xl">View The List</button>
+          <Link to="/listedBooks/readBooks" className="btn max-w-40 bg-[#23BE0A] text-white px-4 py-3 rounded-xl">View The List</Link>
         </div>
       </div>
       <div className="mx-auto">
