@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredRead } from "../../utility/localStorage";
+import ReadBook from "./ReadBook";
 
 export default function ReadBooks() {
   const [read,setRead]= useState([]);
@@ -20,9 +21,9 @@ export default function ReadBooks() {
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-col gap-6 mb-10">
       {
-        read.map(r=> <p>{r.id}</p>)
+        read.map(r=> <ReadBook key={r.id} read={r}></ReadBook>)
       }
     </div>
   )

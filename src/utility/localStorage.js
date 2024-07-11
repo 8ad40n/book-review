@@ -24,9 +24,11 @@ const saveRead = (id) => {
 };
 
 const saveWishlist = (id) => {
+  const storeRead = getStoredRead();
+  const existsRead = storeRead.find((bookid) => bookid === id);
   const store = getStoredWishlist();
   const exists = store.find((bookid) => bookid === id);
-  if (!exists) {
+  if (!exists && !existsRead) {
     store.push(id);
     localStorage.setItem('Wishlist', JSON.stringify(store));
   }

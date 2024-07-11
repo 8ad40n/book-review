@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredWishlist } from "../../utility/localStorage";
+import ReadBook from "../Read Books/ReadBook";
 
 export default function WishList() {
   const [wish,setWish]= useState([]);
@@ -19,9 +20,9 @@ export default function WishList() {
     setWish(wishList);
   }, []);
   return (
-    <div>
+    <div className="flex flex-col gap-6 mb-10">
       {
-        wish.map(w=> <p>{w.id}</p>)
+        wish.map(r=> <ReadBook key={r.id} read={r}></ReadBook>)
       }
     </div>
   )
